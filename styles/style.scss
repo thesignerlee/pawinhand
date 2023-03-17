@@ -18,6 +18,10 @@ $padding50:50px 0;
     display:flex; flex-flow: row nowrap;
     justify-content: space-between; align-items: center;
 }
+@mixin flex-column-between {
+    display:flex; flex-flow: column nowrap;
+    justify-content: space-between;
+}
 // 실행
 #header_bg {
     background-color: $bg1-light;
@@ -101,20 +105,17 @@ $padding50:50px 0;
     }
 }//e:card_wrap
 #qa_wrap { @include layout;
-    h2 {font-weight: 600; font-size: 1.2rem; margin-top: 100px;}
+    h2 {font-weight: 600; font-size: 1.375rem; margin: 30px 0;}
     #qaFrm {
-        fieldset { display: flex;
-            flex-flow: column wrap;
-            justify-content: space-between;
-            padding-top: 15px;
-            input {border: none; background: $bg1-light; padding: 25px 0;}
+        fieldset { @include flex-column-between;
+            * {padding: 10px; background: $bg1-light; border:0; margin-bottom: 16px;}
             input::placeholder {color:$font-color1-bk; padding-left:15px; font-weight: 600;}
             input[name$=id] {}
-            input[name$=number] {margin-top: 15px;}
-            #user_qa {margin-top: 15px; border: none; background: $bg1-light; padding: 25px 0; text-align: start; height: 300px;}
+            input[name$=number] {}
+            #user_qa {background: $bg1-light; padding: 25px 0; height: 200px;}
             #user_qa::placeholder {color:$font-color1-bk; padding-left:15px; font-weight: 600;}
             #qa_btn {
-                background: $bg2-dark; text-align: center; margin-top: 15px;
+                background: $bg2-dark; text-align: center; margin: 0;
     padding:25px 0;
     color:$font-color2-wh;
     margin-bottom: 50px;

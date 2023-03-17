@@ -142,19 +142,19 @@
 }
 #qa_wrap h2 {
   font-weight: 600;
-  font-size: 1.2rem;
-  margin-top: 100px;
+  font-size: 1.375rem;
+  margin: 30px 0;
 }
 #qa_wrap #qaFrm fieldset {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
-  padding-top: 15px;
 }
-#qa_wrap #qaFrm fieldset input {
-  border: none;
+#qa_wrap #qaFrm fieldset * {
+  padding: 10px;
   background: #eee;
-  padding: 25px 0;
+  border: 0;
+  margin-bottom: 16px;
 }
 #qa_wrap #qaFrm fieldset input::-moz-placeholder {
   color: #000;
@@ -171,16 +171,10 @@
   padding-left: 15px;
   font-weight: 600;
 }
-#qa_wrap #qaFrm fieldset input[name$=number] {
-  margin-top: 15px;
-}
 #qa_wrap #qaFrm fieldset #user_qa {
-  margin-top: 15px;
-  border: none;
   background: #eee;
   padding: 25px 0;
-  text-align: start;
-  height: 300px;
+  height: 200px;
 }
 #qa_wrap #qaFrm fieldset #user_qa::-moz-placeholder {
   color: #000;
@@ -200,7 +194,7 @@
 #qa_wrap #qaFrm fieldset #qa_btn {
   background: #222;
   text-align: center;
-  margin-top: 15px;
+  margin: 0;
   padding: 25px 0;
   color: #fff;
   margin-bottom: 50px;
