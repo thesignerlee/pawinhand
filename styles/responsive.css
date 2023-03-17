@@ -1,0 +1,13 @@
+/* 태블릿 */
+@media screen and (max-width:1024px){
+    #gallery_wrap .g1,
+    #gallery_wrap .g9 {display:none;}
+}
+/* 모바일 */
+@media screen and (max-width:768px){
+    #gallery_wrap .g2,
+    #gallery_wrap .g3,
+    #gallery_wrap .g7,
+    #gallery_wrap .g8 {display:none;}
+    /* 중복되므로 g1, g9는 안 써도 됨 */
+}

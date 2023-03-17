@@ -242,8 +242,8 @@ footer {
   color: #fff;
 }
 
-@media screen and (max-width: 1024px) {
-  #header_bg header {
-    background: coral;
-  }
-}/*# sourceMappingURL=style.css.map */
+/* @media screen and (max-width: 1024px) {
+    #header_bg {
+        header {background: coral;}
+}
+} *//*# sourceMappingURL=style.css.map */
