@@ -13,7 +13,14 @@ $padding50:50px 0;
 // @include 호출규칙명
 @mixin layout { //컨텐츠 크기+가운데정렬
     margin:0 auto;
-    width:1200px;}
+/*     width:1200px; */
+/*     width:100%;
+    max-width:1200px;
+    min-width:320px; */
+    max-width:1200px;
+    min-width:320px;
+    width:calc(100% - 30px);
+    overflow-x: hidden;}
 @mixin flex-row-between {
     display:flex; flex-flow: row nowrap;
     justify-content: space-between; align-items: center;
@@ -127,4 +134,11 @@ footer {
     background: $bg2-dark; text-align: center;
     padding:$padding50;
     color:$font-color2-wh;
+}
+
+//media quree
+@media screen and (max-width: 1024px) {
+    #header_bg {
+        header {background: coral;}
+}
 }
