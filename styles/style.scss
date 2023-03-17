@@ -77,23 +77,53 @@ $padding50:50px 0;
     }
     .g5 {width:200px; height:200px;}
 }//e:gallery_wrap
-#bnr_wrap {background: $bg2-dark; text-align: center; height:100px; line-height: 100px;
+#bnr_wrap {background: $bg2-dark; text-align: center;
+    padding:$padding50;
     span {color:$font-color2-wh;}
 }//e:bnr_wrap
 #card_wrap {background: orange;
     @include layout;
     @include flex-row-between;
-    .card {margin: 50px 0;
-        width:22%;
+    padding:$padding50;
+    .card {
+        width:23.5%;
         background: $bg1-light;
-        height:500px;
+        padding:30px 20px;
+        * {padding-bottom: 20px; line-height: 1.3;}
         .photo{
-            margin:25px 0;
             text-align:center;
             img {width: 80%;}
         }
         h2 {font-size: 1.5rem; font-weight: 600;
-        margin: 25px;}
-        p {margin: 25px; font-weight: 600; line-height: 1.2;}
+            margin-left: 15px;}
+        p {margin: 15px; font-weight: 600;}
+        p:last-child {padding:0;}
     }
 }//e:card_wrap
+#qa_wrap { @include layout;
+    h2 {font-weight: 600; font-size: 1.2rem; margin-top: 100px;}
+    #qaFrm {
+        fieldset { display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            padding-top: 15px;
+            input {border: none; background: $bg1-light; padding: 25px 0;}
+            input::placeholder {color:$font-color1-bk; padding-left:15px; font-weight: 600;}
+            input[name$=id] {}
+            input[name$=number] {margin-top: 15px;}
+            #user_qa {margin-top: 15px; border: none; background: $bg1-light; padding: 25px 0; text-align: start; height: 300px;}
+            #user_qa::placeholder {color:$font-color1-bk; padding-left:15px; font-weight: 600;}
+            #qa_btn {
+                background: $bg2-dark; text-align: center; margin-top: 15px;
+    padding:25px 0;
+    color:$font-color2-wh;
+    margin-bottom: 50px;
+            }
+        }
+    }
+}//e:qa_wrap
+footer {
+    background: $bg2-dark; text-align: center;
+    padding:$padding50;
+    color:$font-color2-wh;
+}
